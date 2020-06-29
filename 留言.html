@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background-image: url("wordbac.jpg");
+            background-size: 100%;
+        }
+
+        .back{
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            background-color: #c0c0c0;
+            border-radius: 10px;
+            top: 20px;
+            left: 20px;
+            transition: opacity 1s;
+        }
+
+        .back:hover{
+            opacity: 0.5;
+        }
+
+        .back p{
+            text-align: center;
+            padding-top: 7px;
+            font-size: 17px;
+        }
+
+        .back p:hover{
+            cursor: pointer;
+        }
+
+        .back a{
+            text-decoration: none;
+            color: #fcdacd;
+        }
+        .cle:after {
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            display: none;
+            content: "";
+        }
+
+        .bbslist {
+            width: 600px;
+            margin: 10px auto;
+            border-radius: 5px;
+            background: #adadad;
+            border: 1px solid #a6a6a6;
+        }
+
+        .bbslist>ul {
+            margin: 8px 10px 10px 10px;
+            display: block;
+            clear: both;
+            text-align: center;
+            box-shadow: 3px 3px 25px #FFFFFF;
+        }
+
+        .bbslist>ul>li {
+            background: #FFFFFF;
+            margin: 10px 0;
+            line-height: 30px;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 3px 3px 17px #A6A6A6;
+            padding: 0 5px;
+            font-size: 12px;
+            border: 1px solid #a6a6a6;
+            position: relative;
+            transition: all 0.5s;
+            animation: liBg 0.3s;
+            overflow: hidden;
+        }
+
+        @keyframes liBg {
+            from {
+                background: #442222;
+                opacity: 0;
+                left: -20px;
+                height: 0;
+            }
+
+            to {
+                background: #D6BC8B;
+                opacity: 1;
+                left: 0;
+                height: 30px;
+            }
+        }
+
+        .mesDiv {
+            width: 600px;
+            background: #adadad;
+            height: 260px;
+            border: 1px solid #adadad;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 3px 3px 17px #adadad;
+            animation: msgHeight 0.5s;
+            overflow: hidden;
+        }
+
+        @keyframes msgHeight {
+            from {
+                height: 0;
+                margin-top: 50px;
+                opacity: 0;
+            }
+
+            to {
+                height: 130px;
+                margin-top: 20px;
+                opacity: 1;
+            }
+        }
+
+        /*.inputSty {*/
+        /*    width: 90%;*/
+        /*    height: 70px;*/
+        /*    display: block;*/
+        /*    color: #666;*/
+        /*    border: 1px solid #ddd;*/
+        /*    padding-left: 5px;*/
+        /*    */
+        /*    font-size: 12px;*/
+        /*    clear: both;*/
+        /*    margin: 10px auto;*/
+        /*    border-radius: 5px;*/
+        /*}*/
+
+        .input{
+            margin: 40px auto;
+            border-radius: 5px;
+            display: block;
+            padding-left: 5px;
+            font-size: 12px;
+        }
+
+
+        .btnSty {
+            width: 30%;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 200px;
+            display: block;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #A6A6A6;
+        }
+
+        .btnSty:hover {
+            width: 20%;
+            height: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #A6A6A6;
+        }
+
+        .userSty {
+            width: 25%;
+            height: 25px;
+            margin: 8px 18px 3px 18px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #A6A6A6;
+        }
+        
+        .userSty:hover{
+            cursor: pointer;
+        }
+
+        .dd {
+            width: 135px;
+            height: 10px;
+            position: relative;
+            top: -10px;
+            font-size: 8px;
+            float: right;
+            clear: both;
+        }
+
+        .delbtn{
+            width: 35px;
+            height: 22px;
+            border-radius: 5px;
+            position: relative;
+            top: 5px;
+            right: -4px;
+            float: right;
+            z-index: 2;
+            color: black;
+            /* box-shadow: 2px 2px 3px  #A6A6A6; */
+        }
+        .delbtn:hover{
+            cursor: pointer;
+        }
+
+        .corbtn{
+            width: 35px;
+            height: 22px;
+            float:right;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+            position: relative;
+            top: 5px;
+            right: -10px;
+            color: black;
+        }
+        .corbtn:hover{
+            cursor: pointer;
+        }
+
+        #btnTrue{
+            display: none;
+        }
+
+        #btnFalse{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="back">
+    <p><a href="官网.html">Back</a></p>
+</div>
+<div class="mesDiv">
+    <input id="userId" class="userSty" type="button" value="您的姓名">
+<!--    <input id="msgId" class="inputSty" type="text" placeholder="">-->
+    <textarea id="input" name="content" style="width: 500px;height: 100px;margin-top: 30px;
+            margin-left: 50px;
+            border-radius: 5px;
+            display: block;
+            padding-left: 5px;"></textarea>
+    <input id="btnId" class="btnSty" type="button" value="提交留言">
+    <input id="btnTrue" class="btnSty" type="button" value="确定" onclick="True()">
+    <input id="btnFalse" class="btnSty" type="button" value="取消" onclick="False()">
+</div>
+
+<div class="bbslist cle" id="masMan">
+    <ul id="ulId">
+        <li>—&nbsp;—&nbsp;—&nbsp;留言列表&nbsp;—&nbsp;—&nbsp;—</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var a = 0;
+    var saveId = '';
+    //定义一个函数用来重复获取gId("value"),中value的ID属性
+    function gId(n) {
+        return document.getElementById(n);
+    }
+    //获取姓名
+    gId("userId").onclick = function () {
+        var username = prompt("请输入您的姓名:");
+        alert("您好！" + username + "。");
+        gId("userId").value = username + "的留言：";
+    }
+    //删除留言
+    function delMsg(d) {
+        var parentUl = d.parentNode;
+        var parentDiv = parentUl.parentNode;
+        parentDiv.removeChild(parentUl);
+    }
+    //提交留言
+    gId('btnId').onclick = function () {
+        //获取时间
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var day = today.getDate();
+        var hours = today.getHours();
+        var min = today.getMinutes();
+        var time = year + "年" + month + "月" + day + "日" + " " + hours + ":" + min;
+        // var v = ;
+        if (gId('input').value === '') {
+            alert("留言不能为空");
+            return false;
+        }
+        //创建li
+        else {
+            //创建一个新元素ul
+            var ulcrate = document.createElement('ul');
+            //创建新元素li
+            var licrate = document.createElement('li');
+            //创建一个时间盒子
+            var divcrate = document.createElement('div');
+            //创建一个删除按钮
+            var delbtn = document.createElement('input');
+            var corbtn = document.createElement('input');
+            //给删除按钮赋属性
+            delbtn.setAttribute('type', 'button');
+            delbtn.setAttribute('class', 'delbtn');
+            delbtn.setAttribute('value', '删除');
+            delbtn.setAttribute('onclick', 'delMsg(this)');
+            //修改按钮
+            corbtn.setAttribute('type','button');
+            corbtn.setAttribute('class','corbtn');
+            corbtn.setAttribute('value','修改');
+            corbtn.setAttribute('id','a'+ a);
+            corbtn.setAttribute('onclick','correct(this)');
+            //给创建的ul赋属性
+            ulcrate.setAttribute('id', 'ulId');
+
+            //给时间盒子设置属性
+            // divcrate.setAttribute('class', 'dd');
+            divcrate.className = "dd";
+            //向li里添加在输入框中获取的值
+            licrate.innerText = gId('input').value;
+            licrate.setAttribute('class','a'+ a);
+            a ++;
+
+            //把，删除按钮，留言内容，时间盒子添加到创建的ul里
+            ulcrate.appendChild(corbtn);
+            ulcrate.appendChild(delbtn);
+            ulcrate.appendChild(licrate);
+            ulcrate.appendChild(divcrate);
+            //给时间盒子传递时间
+            divcrate.innerHTML = time;
+            //把创建的ul添加到最外层的div里
+            gId('masMan').appendChild(ulcrate);
+            //留言内容初始化
+            gId("input").value = "";
+        }
+    }
+
+    function correct(e) {
+        saveId = e.id;
+        console.log(saveId);
+        gId('btnId').style.display = 'none';
+        gId('btnTrue').style.display = 'block';
+        gId('btnFalse').style.display = 'block';
+        document.getElementsByTagName('textarea')[0].placeholder = '输入修改的内容';
+    }
+
+    function True(){
+        console.log(gId('input').value);
+        document.getElementsByClassName(saveId)[0].innerText = gId('input').value;
+        gId('btnId').style.display = 'block';
+        gId('btnTrue').style.display = 'none';
+        gId('btnFalse').style.display = 'none';
+        gId('input').value = "";
+        document.getElementsByTagName('textarea')[0].placeholder = "";
+    }
+
+    function False(){
+        gId('btnId').style.display = 'block';
+        gId('btnTrue').style.display = 'none';
+        gId('btnFalse').style.display = 'none';
+        document.getElementsByTagName('textarea')[0].placeholder = "";
+    }
+</script>
+</body>
+</html>

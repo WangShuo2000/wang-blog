@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("./img/dog.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.back{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    transition: opacity 1s;
+}
+
+.back:hover{
+    opacity: 0.5;
+}
+
+.back p{
+    text-align: center;
+    padding-top: 7px;
+    font-size: 17px;
+}
+
+.back p:hover{
+    cursor: pointer;
+}
+
+.back a{
+    text-decoration: none;
+    color: #fcdacd;
+}
+
+.img-list{
+    width: 900px;
+    height: 550px;
+    background-color: rgba(0,0,0,0.3);
+    margin: auto;
+    top: 110px;
+    left: 300px;
+    position: absolute;
+}
+
+.div{
+    background-color: #FFFFFF;
+    width: 60px;
+    height: 35px;
+    margin-left: 40px;
+    margin-top: 60px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+}
+
+.div:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div2{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+    margin-left: 120px;
+    margin-top: 60px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+}
+
+.div2:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div3{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+    margin-left: 60px;
+    margin-top: 60px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+}
+
+.div3:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div4{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+    margin-left: 140px;
+    margin-top: 60px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+}
+
+.div4:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div5{
+    background-color: #FFFFFF;
+    width: 70px;
+    height: 35px;
+    margin-left: 40px;
+    margin-top: 60px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+}
+
+.div5:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div6{
+    background-color: #FFFFFF;
+    width: 60px;
+    height: 35px;
+    right: 100px;
+    top: 130px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+    position: absolute;
+}
+
+.div6:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div7{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 35px;
+    right: 150px;
+    top: 230px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+    position: absolute;
+}
+
+.div7:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div8{
+     background-color: #FFFFFF;
+     width: 60px;
+     height: 35px;
+     right: 40px;
+     top: 330px;
+    padding-top: 10px;
+     display: block;
+     border-radius: 10px;
+     text-align: center;
+     font-weight: bold;
+     transition: opacity .6s;
+     position: absolute;
+ }
+
+.div8:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div9{
+    background-color: #FFFFFF;
+    width: 100px;
+    height: 35px;
+    right: 100px;
+    top: 400px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+    position: absolute;
+}
+
+.div9:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div10{
+    background-color: #FFFFFF;
+    width: 75px;
+    height: 35px;
+    right: 170px;
+    top: 540px;
+    padding-top: 10px;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity .6s;
+    position: absolute;
+}
+
+.div10:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.img-list img{
+    width: 900px;
+    height: 550px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    opacity: 0.8;
+}
+
+#left{
+    width: 45px;
+    height: 55px;
+    font-size: 40px;
+    padding-left: 13px;
+    background-color: rgba(0,0,0,0.5);
+    color: aqua;
+    border-radius: 45px;
+    cursor: pointer;
+    transform: translateX(340px) translateY(-220px);
+    transition: opacity 1s;
+}
+#left:hover{
+    opacity: 0;
+}
+#right{
+    width: 45px;
+    height: 55px;
+    font-size: 40px;
+    padding-left: 15px;
+    background-color: rgba(0,0,0,0.5);
+    color: aqua;
+    border-radius: 45px;
+    cursor: pointer;
+    transform: translateX(1110px) translateY(-260px);
+    transition: opacity 1s;
+}
+#right:hover{
+    opacity: 0;
+}
+#obj{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    list-style: none;
+    left: 700px;
+    margin: auto;
+    transform: translateY(-70px);
+}
+#obj li{
+    width: 10px;
+    height: 10px;
+    border-radius: 45px;
+    background-color: antiquewhite;
+    margin-left: 12px;
+    float: left;
+}
+#obj li:hover{
+    background-color: azure;
+    cursor: pointer;
+}

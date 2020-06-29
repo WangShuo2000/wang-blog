@@ -1,0 +1,106 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("./照片/back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.9;
+}
+
+.back{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    transition: opacity 1s;
+}
+
+.back:hover{
+    opacity: 0.5;
+}
+
+.back p{
+    text-align: center;
+    padding-top: 7px;
+    font-size: 17px;
+}
+
+.back p:hover{
+    cursor: pointer;
+}
+
+.back a{
+    text-decoration: none;
+    color: #fcdacd;
+}
+
+.wrap{
+    width: 1300px;
+    height: 600px;
+    margin: 50px auto;
+    border: 5px solid #555555;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap ul{
+
+}
+
+.wrap ul li{
+    list-style: none;
+    width: 100px;
+    height: 600px;
+    float: left;
+}
+
+.wrap ul li:hover{
+    cursor: pointer;
+}
+
+.wrap ul li .txt{
+    width: 100px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.wrap ul li .txt p{
+    text-align: center;
+    width: 100px;
+    color: #ec971f;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
+    letter-spacing: 20px;
+    margin-top: 20px;
+    writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    font-family: "Microsoft YaHei", "微软雅黑", "consolas";
+}
+
+.footer{
+    position: absolute;
+    left: 500px;
+    bottom: 10px;
+    width: 600px;
+    height: 40px;
+    background: #f0e0d1;
+    background-color: rgba(0,0,0,.3);
+}
+
+.footer p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #1A130C;
+}

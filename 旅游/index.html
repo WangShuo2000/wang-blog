@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游</title>
+    <link rel="stylesheet" type="text/css" href="旅游.css">
+</head>
+<body>
+    <div class="back">
+        <p><a href="../官网.html">Back</a></p>
+    </div>
+    <div class="wrap">
+        <ul>
+            <li style="background-image: url(照片/hangZhou.jpg)">
+                <div class="txt">
+                <p>杭州</p>
+                </div>
+            </li>
+            <li style="background-image: url(照片/ningBo.jpg)">
+                <div class="txt">
+                    <p>宁波</p>
+                </div>
+            </li>
+            <li style="background-image: url(照片/luAn.jpg)">
+                <div class="txt">
+                    <p>六安</p>
+                </div>
+            </li>
+            <li style="background-image: url(照片/wuHan.jpg);width: 1000px">
+                <div class="txt">
+                    <p>武汉</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>这是在不同的城市旅行的时候所拍摄的图片，这几张只是代表,包括武汉，杭州，宁波等等</p>
+    </div>
+<script  type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(".wrap ul li").hover(function () {
+        $(this).stop().animate({
+            width: '1000px'
+        },700).siblings().stop().animate({
+            width: '100px'
+        },700)
+    })
+</script>
+</body>
+</html>

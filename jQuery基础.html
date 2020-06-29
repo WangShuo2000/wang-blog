@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#1").fadeIn();
+                $("#2").fadeIn("slow");
+                $("#3").fadeIn(3000);
+            })
+        })
+    </script>
+</head>
+
+<body style="text-align: center">
+    <p>演示带有不同参数的的fadeIn()方法</p>
+    <button>点击这里使三个方块淡入</button>
+    <br>
+    <br>
+    <div id="1" style="width: 100px;height: 100px;background-color: aquamarine;display: none;margin: 0 auto"></div>
+    <br>
+    <div id="2" style="width: 100px;height: 100px;background-color: aqua;display: none;margin: 0 auto"></div>
+    <br>
+    <div id="3" style="width: 100px;height: 100px;background-color: bisque;display: none;margin: 0 auto"></div>
+</body>
+</html>
